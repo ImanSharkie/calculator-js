@@ -1,0 +1,171 @@
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Varela Round", sans-serif;
+  background-color: #a2cdb9;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 420px;
+  height: 750px;
+  user-select: none;
+  transform: translate(-50%, -50%);
+  color: #373e47;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.display {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 226px;
+  border-radius: 20px 20px 0 0;
+  background-color: #f4fdfb;
+  justify-content: space-between;
+}
+
+.display-text {
+  font-size: 80px;
+  line-height: 75%;
+  overflow: hidden;
+  padding: 30px;
+  text-align: right;
+}
+
+.buttons {
+  font-size: 40px;
+  display: grid;
+  margin: 19px;
+  text-align: center;
+  grid-template-columns: repeat(4, 70px);
+  grid-template-rows: repeat(5, 70px);
+  grid-column-gap: 34px;
+  grid-row-gap: 34px;
+}
+
+.btn {
+  display: table-cell;
+  width: 70px;
+  height: 70px;
+  cursor: pointer;
+  vertical-align: middle;
+  border-radius: 50%;
+}
+
+.btn.opera {
+  background-color: #f4fdfb;
+}
+
+.btn.equal {
+  color: #fff;
+  background-color: #18d4a3;
+}
+
+.container.dark {
+  color: #0db387;
+  background-color: #2e3951;
+}
+
+.container.dark .display {
+  background-color: #212b41;
+}
+
+.container.dark .btn.opera {
+  background-color: #212b41;
+}
+
+.container.dark .btn.digit {
+  color: #91a29c;
+}
+
+.container.dark .btn.equal {
+  color: #212b41;
+  background-color: #18d4a3;
+}
+
+.dots {
+  float: left;
+  margin: 16px;
+  padding: 4px;
+}
+
+.dot {
+  float: left;
+  width: 14px;
+  height: 14px;
+  margin-right: 13px;
+
+  border-radius: 50%;
+}
+
+/* switch */
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  float: right;
+  width: 42px;
+  height: 26px;
+  margin: 16px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+  transition: 0.4s;
+  background-color: #e6ebed;
+}
+
+.slider:before {
+  position: absolute;
+  bottom: 4px;
+  left: 4px;
+  width: 18px;
+  height: 18px;
+  content: "";
+  transition: 0.4s;
+  background-color: #fff;
+}
+
+input:checked + .slider {
+  background-color: #18d4a3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #18d4a3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(16px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
